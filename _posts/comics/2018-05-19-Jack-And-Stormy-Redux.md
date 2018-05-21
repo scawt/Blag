@@ -3,7 +3,7 @@ layout: post
 title: "Jack And Stormy - Episode 1: Tummy Rumbles"
 author: "Scott"
 preview: "/comics/TummyRumblez/preview.png"
-permalink: /JS-Tummy-Rumbles/
+categories: Comics
 ---
 <img src="/comics/TummyRumblez/TummyRumblez.png" alt="A mystery for the ages."><br /><br />
 <div>

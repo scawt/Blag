@@ -26,11 +26,33 @@ comments: true
 </div>
 
 <div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  {% if page.categories %}
+    {% assign this_category = page.categories[0] %}
+    {% assign posts = site.categories[this_category] %}
+    {% for post in posts %}
+      {% if post.url == page.url %}
+        {% assign post_index0 = forloop.index0 %}
+        {% assign post_index1 = forloop.index %}
+      {% endif %}
+    {% endfor %}
+    {% for post in posts %}
+      {% if post_index0 == forloop.index %}
+        {% assign next_post = post %}
+      {% endif %}
+      {% if post_index1 == forloop.index0 %}
+        {% assign prev_post = post %}
+      {% endif %}
+    {% endfor %}
+  {% else %}  
+    {% assign next_post = page.next %}
+    {% assign prev_post = page.previous %}
   {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+
+  {% if next_post %}
+    <a href="{{next_post.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% endif %}
+  {% if prev_post %}
+    <a href="{{ prev_post.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
   {% endif %}
 
   <a href="#" class="top">Go Up</a>

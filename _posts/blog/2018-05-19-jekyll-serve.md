@@ -2,8 +2,8 @@
 layout: post
 title: "Jekyll Serve"
 author: "Scott"
-permalink: /Jekyll Serve/
 preview: "/blog/preview.png"
+categories: Blog
 ---
 
 
