@@ -1,0 +1,54 @@
+# Permalinks
+permalink:      /:categories/:title.html
+
+#pagination
+paginate_multiple:
+  - paginate: 5
+    paginate_path: '/blog/page:num/'
+    sub_dir: '/blog'
+  - paginate: 5
+    paginate_path: '/comics/page:num/'
+    sub_dir: '/comics'
+  - paginate: 6
+    paginate_path: '/philosophy/page:num'
+    sub_dir: '/philosophy'
+  - paginate: 6
+    paginate_path: '/academic/page:num'
+    sub_dir: '/academic'
+    
+
+
+# Setup
+title:          Scott Was Here.
+#baseurl:        ""
+#url:            "http://www.scawt.us"
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+# Build settings
+markdown:       kramdown
+
+# About
+author:
+  name:         Scott
+
+  
+# Gems
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-paginate-multiple
+
+
+
+#usernames
+twitter_username:     sbacon
+#github_username:      
+#linkedin_username:    
+#facebook_username:    
+#instagram_username:   
+#gmail_address:        
+#reddit_username:      
