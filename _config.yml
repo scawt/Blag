@@ -20,8 +20,8 @@ paginate_multiple:
 
 # Setup
 title:          Scott Was Here.
-#baseurl:        ""
-#url:            "http://www.scawt.us"
+baseurl:        ""
+url:            "http://www.scawt.us"
 
 # Assets
 sass:
